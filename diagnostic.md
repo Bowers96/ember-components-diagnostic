@@ -11,13 +11,13 @@ Record your responses inside the fenced code blocks below each question.
 1.  What is the command to generate a new component called '`my-map`'?
 
     ```sh
-    # your response here
+    ember generate component my-map
     ```
 
 1.  What files are created and/or edited to produce a component, and what are their responsibilities?
 
     ```md
-    <!-- your response here -->
+    A template.hbs and a component file, these work together to help form a view in the browser.
     ```
 
 1.  Suppose you have a component '`my-contact`', which is loaded from
@@ -25,7 +25,7 @@ Record your responses inside the fenced code blocks below each question.
     the syntax (code that is written) to render this component inside that template?
 
     ```html
-    <!-- your response here -->
+    {{my-contacts/contacts contacts=contacts}}
     ```
 
 1.  Each contact has multiple phone numbers. Suppose you also have '`my-phone`'
@@ -34,5 +34,9 @@ Record your responses inside the fenced code blocks below each question.
     pass it data?
 
     ```html
-    <!-- your response here -->
+    {{#link-to 'my-contact' my-phone}}
+    <h4>
+      {{my-contact.title}}
+    </h4>
+    {{/link-to}}
     ```
